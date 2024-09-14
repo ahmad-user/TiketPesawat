@@ -54,14 +54,21 @@ function FlightList() {
   }, []);
 
   return (
-    <div>
-      <h1>Flight List</h1>
-      {error && <p>Error: {error.message}</p>}
+    <div className="container mt-5">
+      <h1 className="title is-2">Flight List</h1>
+      {error && (
+        <p className="notification is-danger">Error: {error.message}</p>
+      )}
       <ul>
         {flights.map((flight) => (
-          <li key={flight.id}>
+          <li key={flight.id} className="box mb-3">
             <p>Total Emissions: {flight.total_emissions_kg} kg</p>
-            <Link to={`/flight-details/${flight.id}`}>View Details</Link>
+            <Link
+              to={`/flight-details/${flight.id}`}
+              className="button is-link"
+            >
+              View Details
+            </Link>
           </li>
         ))}
       </ul>

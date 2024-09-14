@@ -15,48 +15,52 @@ const HomePage = () => {
   };
 
   return (
-    <div className="flight-search-container">
-      <h1 className="title">Search Flights</h1>
-      <form onSubmit={handleSearch} className="flight-search-form">
-        <div className="form-group">
-          <label className="form-label">
-            Origin:
+    <div className="container mt-5">
+      <h1 className="title is-2">Search Flights</h1>
+      <form onSubmit={handleSearch} className="box">
+        <div className="field">
+          <label className="label">Origin:</label>
+          <div className="control">
             <input
               type="text"
               value={origin}
               onChange={(e) => setOrigin(e.target.value)}
               required
-              className="form-input"
+              className="input"
             />
-          </label>
+          </div>
         </div>
-        <div className="form-group">
-          <label className="form-label">
-            Destination:
+        <div className="field">
+          <label className="label">Destination:</label>
+          <div className="control">
             <input
               type="text"
               value={destination}
               onChange={(e) => setDestination(e.target.value)}
               required
-              className="form-input"
+              className="input"
             />
-          </label>
+          </div>
         </div>
-        <div className="form-group">
-          <label className="form-label">
-            Departure Date:
+        <div className="field">
+          <label className="label">Departure Date:</label>
+          <div className="control">
             <input
               type="date"
               value={departureDate}
               onChange={(e) => setDepartureDate(e.target.value)}
               required
-              className="form-input"
+              className="input"
             />
-          </label>
+          </div>
         </div>
-        <button type="submit" className="submit-button">
-          Search Flights
-        </button>
+        <div className="field">
+          <div className="control">
+            <button type="submit" className="button is-primary">
+              Search
+            </button>
+          </div>
+        </div>
       </form>
     </div>
   );

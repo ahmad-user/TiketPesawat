@@ -36,17 +36,21 @@ const FlightDetails = () => {
   if (!flightDetails) return <p>No flight details available.</p>;
 
   return (
-    <div>
-      <h2>Flight Details</h2>
-      <p>Total Emissions: {flightDetails.total_emissions_kg} kg</p>
-      <p>
-        Payment Required By:{" "}
-        {flightDetails.payment_requirements.payment_required_by}
-      </p>
-      <p>
-        Price Guarantee Expires At:{" "}
-        {flightDetails.payment_requirements.price_guarantee_expires_at}
-      </p>
+    <div className="container mt-5">
+      <h2 className="title is-3">Flight Details</h2>
+      <div className="box">
+        <p className="subtitle is-5">
+          Total Emissions: {flightDetails.total_emissions_kg} kg
+        </p>
+        <p className="subtitle is-5">
+          Payment Required By:{" "}
+          {flightDetails.payment_requirements.payment_required_by}
+        </p>
+        <p className="subtitle is-5">
+          Price Guarantee Expires At:{" "}
+          {flightDetails.payment_requirements.price_guarantee_expires_at}
+        </p>
+      </div>
     </div>
   );
 };
