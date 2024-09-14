@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 const FlightDetails = () => {
-  const { id } = useParams(); // Get flight ID from URL
+  const { id } = useParams(); 
   const [flightDetails, setFlightDetails] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
