@@ -1,0 +1,30 @@
+POST https://api.duffel.com/air/offer_requests?return_offers=true
+Accept-Encoding: gzip
+Accept: application/json
+Content-Type: application/json
+Duffel-Version: v2
+Authorization: Bearer duffel_test_fbwSiX6iO0rF695VZxaM6Sz313J8dYq6c7QiBbEzdhk
+
+{
+  "data": {
+    "slices": [
+      {
+        "origin": "MAD",
+        "destination": "JFK",
+        "departure_date": "2024-09-20"
+      },
+      {
+        "origin": "JFK",
+        "destination": "MAD",
+        "departure_date": "2024-09-25"
+      }
+    ],
+    "passengers": [
+      {
+        "type": "adult"
+      }
+    ],
+    "max_connections": "0"
+  }
+}
+
